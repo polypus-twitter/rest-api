@@ -1,0 +1,15 @@
+---
+version: "2"
+services: 
+  mariadb:
+    image: polypus/mariadb
+    container_name: mariadb-polypus
+    volumes:
+      - /var/lib/mysql
+    ports:
+      - 3306:3306
+  rest-api:
+    image: polypus/rest-api
+    container_name: restapi-polypus
+    ports:
+      - 8080:8080
